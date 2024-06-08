@@ -8,7 +8,8 @@ const MY_QUERY = gql`
   query MyQuery {
     myData {
       id
-      name
+      name,
+      age
     }
   }
 `;
@@ -16,6 +17,7 @@ const MY_QUERY = gql`
 const MyComponent = () => {
   const { loading, error, data } = useQuery(MY_QUERY);
 
+  console.log(data,"datadatadatadata")
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
