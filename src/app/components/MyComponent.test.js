@@ -2,6 +2,8 @@ import React from "react";
 import { render, waitFor } from "@testing-library/react";
 import { MockedProvider } from "@apollo/client/testing";
 import MyComponent, { MY_QUERY } from "./MyComponent";
+import { useQuery, gql } from '@apollo/client';
+
 
 const mocks = [
   {
